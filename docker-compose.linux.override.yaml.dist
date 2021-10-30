@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  php:
+    image: webdevops/php-apache-dev:5.6
+    container_name: lamp
+    working_dir: /app
+    ports:
+      - "8080:80"
+    volumes:
+      -   ./:/app
+    environment:
+      WEB_DOCUMENT_ROOT: /app
+      WEB_DOCUMENT_INDEX: index.php
