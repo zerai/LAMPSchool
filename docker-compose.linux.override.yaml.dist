@@ -2,13 +2,35 @@ version: '3.8'
 
 services:
   php:
-    image: webdevops/php-apache-dev:5.6
-    container_name: lamp
+    image: webdevops/php-dev:5.6
+    container_name: php
+    links:
+      - apache
     working_dir: /app
     ports:
-      - "8080:80"
+      - '2222:22'
     volumes:
       -   ./:/app
     environment:
       WEB_DOCUMENT_ROOT: /app
       WEB_DOCUMENT_INDEX: index.php
+      PHP_DEBUGGER: xdebug
+      XDEBUG_MODE: debug
+      XDEBUG_REMOTE_AUTOSTART: "yes" #XDEBUG_START_WITH_REQUEST: "yes"
+      XDEBUG_IDE_KEY: PHPSTORM
+      XDEBUG_REMOTE_HOST: "host.docker.internal" #XDEBUG_CLIENT_HOST: "host.docker.internal"
+      XDEBUG_REMOTE_PORT: 9000 #XDEBUG_CLIENT_PORT: 9003
+
+
+  apache:
+    image: webdevops/apache-dev:alpine-3
+    container_name: apache
+    working_dir: /app
+    ports:
+      - '8080:80'
+    volumes:
+      -   ./:/app
+    environment:
+      WEB_DOCUMENT_ROOT: /app
+      WEB_DOCUMENT_INDEX: index.php
+      WEB_PHP_SOCKET: php:9000
