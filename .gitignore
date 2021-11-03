@@ -10,3 +10,5 @@ php-ini*.php
 php-iniit.php
 project.xml
 /vendor/
+
+docker-compose.override.yaml

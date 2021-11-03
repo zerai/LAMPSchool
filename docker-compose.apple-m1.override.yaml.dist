@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: docker/php-apache/Dockerfile.56
+    container_name: lamp
+    working_dir: /app
+    ports:
+      - "8080:80"
+    volumes:
+      -   ./:/app
+    environment:
+      WEB_DOCUMENT_ROOT: /app
+      WEB_DOCUMENT_INDEX: index.php
