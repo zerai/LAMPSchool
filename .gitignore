@@ -13,3 +13,4 @@ project.xml
 
 docker-compose.override.yaml
 /workflow
+/tools/**/vendor
