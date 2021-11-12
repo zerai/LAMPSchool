@@ -4,9 +4,51 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a5db5f6ec1376a63181f95c0c6bb98e6",
+    "content-hash": "39fcb4da90aad786b0c321665741d142",
     "packages": [],
     "packages-dev": [
+        {
+            "name": "approvals/approval-tests",
+            "version": "v1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/approvals/ApprovalTests.php.git",
+                "reference": "1905c3868f0f6825a9a397554ce85855db5f0b67"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/approvals/ApprovalTests.php/zipball/1905c3868f0f6825a9a397554ce85855db5f0b67",
+                "reference": "1905c3868f0f6825a9a397554ce85855db5f0b67",
+                "shasum": ""
+            },
+            "require": {
+                "delight-im/str": "^2.4",
+                "phpunit/phpunit": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ApprovalTests\\": "src/",
+                    "ApprovalTests\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Llewellyn Falco",
+                    "email": "llewellyn.falco@gmail.com"
+                }
+            ],
+            "description": "Approval Testing for your legacy projects.",
+            "homepage": "https://github.com/approvals/ApprovalTests.php",
+            "support": {
+                "source": "https://github.com/approvals/ApprovalTests.php/tree/v1.4.0"
+            },
+            "time": "2019-04-10T19:22:59+00:00"
+        },
         {
             "name": "bamarni/composer-bin-plugin",
             "version": "1.4.1",
@@ -56,6 +98,46 @@
                 "source": "https://github.com/bamarni/composer-bin-plugin/tree/master"
             },
             "time": "2020-05-03T08:27:20+00:00"
+        },
+        {
+            "name": "delight-im/str",
+            "version": "v2.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/delight-im/PHP-Str.git",
+                "reference": "5e359f4759208c84d0019be34a31dd1c4498cf15"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/delight-im/PHP-Str/zipball/5e359f4759208c84d0019be34a31dd1c4498cf15",
+                "reference": "5e359f4759208c84d0019be34a31dd1c4498cf15",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Delight\\Str\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Convenient object-oriented operations on strings",
+            "homepage": "https://github.com/delight-im/PHP-Str",
+            "keywords": [
+                "string",
+                "strings"
+            ],
+            "support": {
+                "issues": "https://github.com/delight-im/PHP-Str/issues",
+                "source": "https://github.com/delight-im/PHP-Str/tree/v2.7.0"
+            },
+            "time": "2021-10-24T13:06:44+00:00"
         },
         {
             "name": "doctrine/instantiator",
