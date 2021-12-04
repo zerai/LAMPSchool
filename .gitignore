@@ -10,6 +10,8 @@ php-ini*.php
 php-iniit.php
 project.xml
 /vendor/
+/tests/installer-*.php
+
 
 docker-compose.override.yaml
 /workflow
