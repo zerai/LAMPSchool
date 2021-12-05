@@ -2,6 +2,8 @@
 
 namespace LampSchool\Tests\Support;
 
+use InvalidArgumentException;
+
 require_once __DIR__ . '../../../install/funzioni_install.php';
 
 class Installer
@@ -39,6 +41,8 @@ class Installer
          * TODO: validate data
          */
 
+        $this->validate($dbHost, $dbName, $dbUser, $dbPassword, $dbTablePrefix, $adminUser, $adminPassword, $installationSuffix, $schoolName);
+
         $this->dbHost = $dbHost;
         $this->dbName = $dbName;
         $this->dbUser = $dbUser;
@@ -48,6 +52,29 @@ class Installer
         $this->adminPassword = $adminPassword;
         $this->installationSuffix = $installationSuffix;
         $this->schoolName = $schoolName;
+    }
+
+    private function validate($dbHost, $dbName, $dbUser, $dbPassword, $dbTablePrefix, $adminUser, $adminPassword, $installationSuffix, $schoolName)
+    {
+        if ($dbHost === null | $dbHost === '')
+        {
+            throw new InvalidArgumentException('Errore nei parametri');
+        }
+
+        if ($dbName === null | $dbName === '')
+        {
+            throw new InvalidArgumentException('Errore nei parametri');
+        }
+
+        if ($dbUser === null | $dbUser === '')
+        {
+            throw new InvalidArgumentException('Errore nei parametri');
+        }
+
+        if ($dbPassword === null | $dbPassword === '')
+        {
+            throw new InvalidArgumentException('Errore nei parametri');
+        }
     }
 
     private function getDbConnection()

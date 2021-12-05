@@ -4,51 +4,9 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "39fcb4da90aad786b0c321665741d142",
+    "content-hash": "1d9d7bf21a4324a068395896973ed6a1",
     "packages": [],
     "packages-dev": [
-        {
-            "name": "approvals/approval-tests",
-            "version": "v1.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/approvals/ApprovalTests.php.git",
-                "reference": "1905c3868f0f6825a9a397554ce85855db5f0b67"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/approvals/ApprovalTests.php/zipball/1905c3868f0f6825a9a397554ce85855db5f0b67",
-                "reference": "1905c3868f0f6825a9a397554ce85855db5f0b67",
-                "shasum": ""
-            },
-            "require": {
-                "delight-im/str": "^2.4",
-                "phpunit/phpunit": ">=5.4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "ApprovalTests\\": "src/",
-                    "ApprovalTests\\Tests\\": "tests/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Llewellyn Falco",
-                    "email": "llewellyn.falco@gmail.com"
-                }
-            ],
-            "description": "Approval Testing for your legacy projects.",
-            "homepage": "https://github.com/approvals/ApprovalTests.php",
-            "support": {
-                "source": "https://github.com/approvals/ApprovalTests.php/tree/v1.4.0"
-            },
-            "time": "2019-04-10T19:22:59+00:00"
-        },
         {
             "name": "bamarni/composer-bin-plugin",
             "version": "1.4.1",
@@ -196,6 +154,53 @@
                 "source": "https://github.com/doctrine/instantiator/tree/master"
             },
             "time": "2015-06-14T21:17:01+00:00"
+        },
+        {
+            "name": "donetechno/approval-tests-php5.6",
+            "version": "v1.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pyxis-studio/ApprovalTests.5.6php.git",
+                "reference": "eeabe25277487f5437e0dda12557cb522c4793d8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pyxis-studio/ApprovalTests.5.6php/zipball/eeabe25277487f5437e0dda12557cb522c4793d8",
+                "reference": "eeabe25277487f5437e0dda12557cb522c4793d8",
+                "shasum": ""
+            },
+            "require": {
+                "delight-im/str": "^2.4",
+                "php": "^5.6",
+                "phpunit/phpunit": "^5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ApprovalTests\\": "src/",
+                    "ApprovalTests\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Llewellyn Falco",
+                    "email": "llewellyn.falco@gmail.com"
+                },
+                {
+                    "name": "Francis Gauthier",
+                    "email": "fgauthier@donetechno.com"
+                }
+            ],
+            "description": "Approval Testing for your legacy projects.",
+            "homepage": "https://github.com/approvals/ApprovalTests.php",
+            "support": {
+                "source": "https://github.com/pyxis-studio/ApprovalTests.5.6php/tree/v1.4.1"
+            },
+            "time": "2020-12-08T19:39:24+00:00"
         },
         {
             "name": "myclabs/deep-copy",

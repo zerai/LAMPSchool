@@ -22,8 +22,8 @@
         "php": ">=5.6"
     },
     "require-dev": {
-        "approvals/approval-tests": "^1.4",
         "bamarni/composer-bin-plugin": "^1.4",
+        "donetechno/approval-tests-php5.6": "^1.4",
         "phpunit/phpunit": "^5.7"
     },
     "config": {
