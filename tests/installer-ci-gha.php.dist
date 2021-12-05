@@ -1,0 +1,31 @@
+<?php
+
+require dirname(__DIR__).'/vendor/autoload.php';
+
+use LampSchool\Tests\Support\Installer;
+
+$installer = new Installer(
+    '0.0.0.0',               # <REQUIRED> change me..
+    'lamp_test',      # <REQUIRED> change me..
+    'test',      # <REQUIRED> change me..
+    'test',  # <REQUIRED> change me..
+    '',
+    'adminlamp',
+    'admin-password',           # <REQUIRED> change me..
+    '',
+    'I.T.I.S. Alan Turing'
+);
+
+
+echo "Inizio installazione LAMPSchool...\n\n";
+
+echo "L\'installazione richiederà diversi minuti, attendere...\n\n";
+
+try {
+    $installer->run();
+}catch (\Exception $exception){
+    echo $exception->getMessage() . "\n\n";
+
+}
+
+echo "Installazione terminata...\n\n";
